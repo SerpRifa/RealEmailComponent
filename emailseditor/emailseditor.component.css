@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  }
+
+:host {
+    font-family: 'Open Sans';    
+}
+
+.main-mailbox{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    min-height: 300px;
+}
+
+.emails-editor-button{
+    background: #6699ff;
+    border: none;
+    height: 36px;
+    border-radius: 5px;
+    color: white;
+    padding: 0 18px 0 18px;
+    min-width: 98px;
+    font-size: 14px;
+}
+
+.email-list{
+    background-color: white;
+    padding: 3px 6px 6px 6px;
+    margin-top: 35px;
+    flex-grow: 1;
+    overflow-y: auto;
+    border-top: #a9a9a987;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+.emails-editor-list-button{
+    padding: 30px 0px 34px 40px;
+}
+
+.emails-editor-head-text{
+    font-size: 20px;
+}
+.emails-editor{    
+    padding: 29px 40px 30px 40px;
+    background-color:  #f5f5f5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-ed {
+    background-color: #d4e4ff;
+    color: rgba(0, 0, 0, 1);
+    display: inline-block;
+    padding: 3px 8px 3px 12px;
+    border-radius: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 3px 6px 3px 0px;
+}
+
+.delete{   
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    cursor:pointer;      
+  }
+
+  i.delete:before{
+    content: "×" !important;
+    padding-left: 2px;
+    font-size: 16px;
+    padding-right: 3px;
+  }
+
+  .invalid{
+    text-decoration: underline;	
+	text-decoration-color: red;
+  }
+
+.email-input{
+    border:0;       
+    outline:0;
+    background:transparent;
+    font-size: 14px;
+    margin: 3px 6px 3px 0px;
+}

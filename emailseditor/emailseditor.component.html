@@ -1,0 +1,33 @@
+
+<div class="main-mailbox">
+<div class="emails-editor" [ngClass]="focused" >
+    <div class="emails-editor-head">
+        <span  class="emails-editor-head-text"> Share <b>Board name</b> with other </span>
+    </div>
+    <div class="email-list">
+       
+             <span *ngFor="let email of emails" class="email-ed" [ngClass]="getValidClass(email)">
+            {{email}} <i class="delete" (click)="removeEmail(email)" ></i>
+        </span>    
+
+        <span style="display:inline-block;">
+            <input                
+                class="email-input"
+                placeholder = "add more people..."
+                [(ngModel)]="labelToAdd" 
+                (keydown)="onKeyDown($event)"
+                (focus)="onFocus()" 
+                (focusout)="focusOutFunction()"       
+                (paste)="onPaste($event.clipboardData.getData('Text')); $event.preventDefault();"            
+                
+            #email />
+        </span>  
+    
+       
+    </div>  
+</div>
+    <div class="emails-editor-list-button">
+        <button (click)="onSetRandomEmail()" class="emails-editor-button">Add email</button>
+        <button (click)="onGetCount()" class="emails-editor-button" style="margin-left:20px">Get email count</button>
+    </div>
+</div>
